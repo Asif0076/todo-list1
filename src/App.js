@@ -1,5 +1,7 @@
+import React from 'react';
 import './App.css';
 import {useState} from "react";
+import List from "./List";
 
 function App() {
  
@@ -12,7 +14,7 @@ function App() {
  };
 
  const addItemToList = () => {
-  updateItemList([...itemList, currentItem]);
+  updateItemList([...itemList, { item: currentItem, Key: Date.now()}]);
   setCurrentItem("");
  };
   return (
@@ -23,6 +25,7 @@ function App() {
               <input value = { currentItem } onChange = {onChangeHandler} />
               <button onClick={ addItemToList}>+</button>
            </div>
+           <List itemList = {itemList}/>
          </div>
       </header>
     </div>
