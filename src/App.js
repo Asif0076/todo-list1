@@ -20,10 +20,12 @@ function App() {
   return (
     <div className="app">
       <header className="app-header">
+      <h1>ADD USER</h1>
+
         <div className="wrapper">
           <div className="input-wrapper">
-              <input value = { currentItem } onChange = {onChangeHandler} />
-              <button onClick={ addItemToList}>+</button>
+              <input className='input1' value = { currentItem } onChange = {onChangeHandler} />
+              <button onClick={ addItemToList}>+ Add</button>
            </div>
            <List itemList = {itemList}/>
          </div>
